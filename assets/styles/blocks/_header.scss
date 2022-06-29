@@ -1,0 +1,74 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 0;
+    color: white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    max-width: 1216px;
+    // .header__left
+    &__left {
+        transition: filter 0.25s ease;
+        &:hover {
+            filter: brightness(120%);
+        }
+    }
+    // .header__logo
+    &__logo {
+    }
+    // .header__right
+    &__right {
+        position: relative;
+    }
+    // .header__list
+    &__list {
+        display: flex;
+    }
+    // .header__list-item_active
+    &__list-item {
+        //10px ++
+        padding: 0px 16px;
+        display: inline-block;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        text-transform: uppercase;
+        font-feature-settings: "liga" off;
+        &:hover {
+            @extend .active;
+        }
+        &.active {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            text-transform: uppercase;
+            font-feature-settings: "liga" off;
+            background: $cl1;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+    &__link {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    &__runner {
+        position: absolute;
+        left: calc(50% - 4.5px);
+        bottom: -8px;
+        width: 9px;
+        height: 0px;
+        border: 2.50195px solid $cl2;
+        border-radius: 10px;
+        transition: left 0.5s ease, transform 0.2s ease;
+        background-color: $cl2;
+    }
+}

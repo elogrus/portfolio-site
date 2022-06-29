@@ -1,0 +1,36 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    // .main__text
+    &__text {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 56px;
+        line-height: 150%;
+        /* or 84px */
+
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: $cl3;
+        & b {
+            color: $cl2;
+            font-weight: 600;
+        }
+    }
+    // .main__arrow
+    &__arrow {
+        position: absolute;
+        bottom: 40px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}

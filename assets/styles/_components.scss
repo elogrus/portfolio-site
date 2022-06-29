@@ -1,0 +1,83 @@
+.button1 {
+    width: 163px;
+    height: 40px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    & span {
+        position: relative;
+        top: -0.5px;
+    }
+    & img {
+        width: 24px;
+        height: 24px;
+        transition: filter 0.2s ease;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    border: 1px solid $cl3;
+    border-radius: 100px;
+    background-color: transparent;
+    color: $cl2;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+    &:hover {
+        background-color: $cl2;
+        color: black;
+        & img {
+            filter: brightness(0);
+        }
+    }
+    &:active {
+        background-color: $cl3;
+    }
+}
+
+.button2 {
+    width: 189px;
+    height: 40px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    & span {
+        position: relative;
+        top: -0.5px;
+    }
+    & img {
+        width: 24px;
+        height: 24px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 28px;
+    gap: 8px;
+    background: $cl1;
+    border: 1px solid $cl2;
+    border-radius: 100px;
+    color: $cl2;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1.025);
+    }
+}

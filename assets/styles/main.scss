@@ -1,0 +1,25 @@
+@import "reseter";
+@import "vars";
+@import "fonts";
+@import "components";
+@import "./blocks/header";
+@import "./blocks/home";
+.wrapper {
+    min-height: 100vh;
+    max-width: 1216px;
+    padding: 0 110px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+body {
+    background: $cl4;
+    height: 10000px;
+}
+html {
+    scroll-behavior: smooth;
+}
+::selection {
+    background-color: rgba(188, 60, 216, 1);
+}
