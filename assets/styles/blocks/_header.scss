@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 34px 0;
+    padding: 34px 10px;
     color: white;
     position: fixed;
     z-index: 100;
     width: 100%;
     max-width: 1216px;
+    background-color: rgba($color: #010101, $alpha: 0.8);
+
     // .header__left
     &__left {
         transition: filter 0.25s ease;
@@ -26,10 +28,8 @@
     &__list {
         display: flex;
     }
-    // .header__list-item_active
+    // .header__list-item
     &__list-item {
-        //10px ++
-        padding: 0px 16px;
         display: inline-block;
         font-family: "Work Sans";
         font-style: normal;
@@ -41,6 +41,7 @@
         &:hover {
             @extend .active;
         }
+        // .header__list-item .active
         &.active {
             font-family: "Work Sans";
             font-style: normal;
@@ -56,10 +57,16 @@
             text-fill-color: transparent;
         }
     }
+    // .header__link
     &__link {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 0px 16px;
         color: inherit;
         text-decoration: inherit;
     }
+    // .header__runner
     &__runner {
         position: absolute;
         left: calc(50% - 4.5px);

@@ -1,3 +1,4 @@
+@import "../components";
 .home {
     display: flex;
     flex-direction: column;
@@ -8,20 +9,10 @@
 
     // .main__text
     &__text {
-        font-family: "Work Sans";
-        font-style: normal;
-        font-weight: 300;
+        @include text1;
         font-size: 56px;
         line-height: 150%;
-        /* or 84px */
-
         text-align: center;
-        letter-spacing: -0.02em;
-        color: $cl3;
-        & b {
-            color: $cl2;
-            font-weight: 600;
-        }
     }
     // .main__arrow
     &__arrow {

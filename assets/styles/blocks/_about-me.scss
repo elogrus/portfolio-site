@@ -1,0 +1,41 @@
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 34px;
+    padding: 107.5px 0;
+
+    // .about-me__text
+    &__text {
+        @include text1;
+        width: 50%;
+    }
+    // .about-me__title
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $cl2;
+    }
+    // .about-me__content
+    &__content {
+        font-size: 32px;
+    }
+    // .about-me__photos
+    &__photos {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        width: 50%;
+    }
+    // .about-me__photos-column
+    &__photos-column {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        & img {
+            @include img-border;
+            width: 282px;
+        }
+    }
+}

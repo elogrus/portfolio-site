@@ -1,0 +1,59 @@
+.footer {
+    @include text1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 40px 0;
+    // .footer__title
+    &__title {
+        font-size: 56px;
+        margin-bottom: 4px;
+    }
+    // .footer__subtitle
+    &__subtitle {
+        font-size: 18px;
+        color: $cl2;
+        margin-bottom: 60px;
+    }
+    // .footer__list
+    &__list {
+        display: flex;
+        gap: 56px;
+    }
+    // .footer__item
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.55;
+        transform: scale(85%);
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.1s ease, opacity 0.25s ease;
+        &:hover {
+            transform: scale(100%);
+            opacity: 1;
+        }
+        &:active {
+            transform: scale(90%);
+            opacity: 0.9;
+        }
+    }
+    // .footer__mail
+    &__mail {
+    }
+    // .footer__behance
+    &__behance {
+    }
+    // .footer__dribble
+    &__dribble {
+    }
+    // .footer__linkedin
+    &__linkedin {
+    }
+    // .footer__end-text
+    &__end-text {
+        margin-top: 80px;
+        font-size: 18px;
+    }
+}

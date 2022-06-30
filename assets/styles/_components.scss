@@ -14,11 +14,6 @@
         position: relative;
         top: -0.5px;
     }
-    & img {
-        width: 24px;
-        height: 24px;
-        transition: filter 0.2s ease;
-    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +36,15 @@
     &:active {
         background-color: $cl3;
     }
+    &_arrow {
+        @extend .button1;
+        &:after {
+            content: url("../../media/expand-false.svg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .button2 {
@@ -57,10 +61,6 @@
     & span {
         position: relative;
         top: -0.5px;
-    }
-    & img {
-        width: 24px;
-        height: 24px;
     }
     display: flex;
     justify-content: center;
@@ -80,4 +80,31 @@
     &:active {
         transform: scale(1.025);
     }
+    &_arrow {
+        @extend .button2;
+        &:after {
+            content: url("../../media/expand-true.svg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@mixin text1 {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: $cl3;
+    & b {
+        color: $cl2;
+        font-weight: 600;
+    }
+}
+
+@mixin img-border {
+    border-radius: 16px;
 }
