@@ -66,7 +66,7 @@ function scrollTo(event) {
     window.scroll(0, pos);
 }
 document.querySelectorAll("#scroller").forEach((elem) => {
-    elem.addEventListener("mousedown", scrollTo);
+    elem.addEventListener("pointerdown", scrollTo);
 });
 
 // * --------------------------- * //
@@ -86,7 +86,7 @@ function burger() {
             burgerModal.dataset.opened = true;
         }
     }
-    burger.addEventListener("mousedown", onBurgerClick);
+    burger.addEventListener("pointerdown", onBurgerClick);
 }
 
 burger();
