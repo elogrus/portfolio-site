@@ -39,3 +39,85 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .about-me__content {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about-me__title {
+        font-size: 20px;
+    }
+    .about-me__content {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .about-me__title {
+        font-size: 18px;
+    }
+    .about-me__content {
+        line-height: 170%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-me__title {
+        font-size: 18px;
+    }
+    .about-me__content {
+        font-size: 20px;
+    }
+}
+
+// ---------------- //
+
+@media screen and (max-width: 780px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me__text,
+    .about-me__photos {
+        width: 100%;
+    }
+
+    .about-me__photos-column {
+        flex-direction: row;
+    }
+    .about-me__photos {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .about-me__photos-column {
+        flex-direction: column;
+    }
+}
+
+// ------------- //
+
+@media screen and (max-width: 1000px) {
+    .about-me {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about-me {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-me {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}

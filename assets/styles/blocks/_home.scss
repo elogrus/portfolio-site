@@ -7,21 +7,55 @@
     height: 100vh;
     position: relative;
 
-    // .main__text
+    // .home__text
     &__text {
         @include text1;
         font-size: 56px;
         line-height: 150%;
         text-align: center;
     }
-    // .main__arrow
+    // .home__arrow
     &__arrow {
         position: absolute;
         bottom: 40px;
         cursor: pointer;
         transition: transform 0.2s ease;
+        user-select: none;
         &:hover {
             transform: scale(1.3);
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home__text {
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .home__text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .home__text {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .home__text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home__text {
+        font-size: 24px;
+    }
+    .home__arrow {
+        bottom: 80px;
     }
 }

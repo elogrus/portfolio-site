@@ -11,7 +11,25 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header">
+            <aside class="burger-menu" id="burger-menu" data-opened="false">
+                <ul class="burger-menu__list">
+                    <li class="burger-menu__item active">
+                        <a href="#!">HOME</a>
+                    </li>
+                    <li class="burger-menu__item"><a href="#!">Work</a></li>
+                    <li class="burger-menu__item"><a href="#!">About</a></li>
+                </ul>
+                <div
+                    class="burger-menu__burger"
+                    id="burger"
+                    data-opened="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </aside>
+            <header class="header" id="header">
                 <div class="header__left">
                     <a href="#!"
                         ><img
@@ -100,6 +118,11 @@
                         </div>
                     </li>
                     <li class="work__item item">
+                        <img
+                            class="item__img"
+                            src="./assets/media/work/work2.png"
+                            alt=""
+                        />
                         <div class="item__content">
                             <span class="item__title"
                                 >Plant identification app</span
@@ -112,13 +135,8 @@
                                 </b>
                             </span>
                             <span class="item__category">Mobile App</span>
-                            <button class="button1_arrow">View work</button>
+                            <button class="button2_arrow">View work</button>
                         </div>
-                        <img
-                            class="item__img"
-                            src="./assets/media/work/work2.png"
-                            alt=""
-                        />
                     </li>
                     <li class="work__item item">
                         <img
@@ -140,6 +158,11 @@
                         </div>
                     </li>
                     <li class="work__item item">
+                        <img
+                            class="item__img"
+                            src="./assets/media/work/work4.png"
+                            alt=""
+                        />
                         <div class="item__content">
                             <span class="item__title">Logo Animation</span>
                             <span class="item__description">
@@ -152,11 +175,6 @@
                             <span class="item__category">Animation</span>
                             <button class="button1_arrow">View work</button>
                         </div>
-                        <img
-                            class="item__img"
-                            src="./assets/media/work/work4.png"
-                            alt=""
-                        />
                     </li>
                 </ul>
             </section>

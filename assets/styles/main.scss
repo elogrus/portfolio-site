@@ -8,16 +8,18 @@
 @import "./blocks/work";
 @import "./blocks/about-me";
 @import "./blocks/footer";
+@import "./blocks/burger-menu";
 .wrapper {
     min-height: 100vh;
-    // -10px to padding
-    max-width: 1216px;
+    // -30px to padding
+    max-width: 1196px;
     position: relative;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 15px;
+    z-index: 10;
 }
 body {
     background: $cl4;
@@ -27,6 +29,19 @@ html {
 }
 ::selection {
     background-color: rgba(188, 60, 216, 1);
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: $cl4; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: $cl1; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 [hidden] {

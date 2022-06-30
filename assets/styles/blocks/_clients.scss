@@ -19,7 +19,9 @@
     }
     // .clients__item
     &__item {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     // .clients__AirBnb
     &__AirBnb {
@@ -32,5 +34,103 @@
     }
     // .clients__FedEx
     &__FedEx {
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .clients__list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .clients__item {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .clients__item {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .clients__item {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .clients__item {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .clients__item {
+        width: 220px;
+    }
+}
+
+// ----------------- //
+
+@media screen and (max-width: 590px) {
+    .clients__text {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .clients__text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .clients__text {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .clients__text {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .clients__text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .clients__text {
+        font-size: 12px;
+    }
+}
+
+// ------------- //
+
+@media screen and (max-width: 1000px) {
+    .clients {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .clients {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .clients {
+        padding-top: 40px;
+        padding-bottom: 30px;
     }
 }

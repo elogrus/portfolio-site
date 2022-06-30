@@ -2,23 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 34px 10px;
-    color: white;
+    padding: 34px 30px;
+    color: $cl2;
     position: fixed;
     z-index: 100;
     width: 100%;
-    max-width: 1216px;
+    max-width: 1196px;
     background-color: rgba($color: #010101, $alpha: 0.8);
-
+    transition: top 0.5s ease;
     // .header__left
     &__left {
         transition: filter 0.25s ease;
         &:hover {
             filter: brightness(120%);
         }
+        &:active {
+            filter: brightness(90%);
+        }
     }
     // .header__logo
     &__logo {
+        user-select: none;
     }
     // .header__right
     &__right {
@@ -31,11 +35,9 @@
     // .header__list-item
     &__list-item {
         display: inline-block;
-        font-family: "Work Sans";
-        font-style: normal;
+        @include text1;
         font-weight: 600;
         font-size: 14px;
-        line-height: 150%;
         text-transform: uppercase;
         font-feature-settings: "liga" off;
         &:hover {
@@ -43,11 +45,9 @@
         }
         // .header__list-item .active
         &.active {
-            font-family: "Work Sans";
-            font-style: normal;
+            @include text1;
             font-weight: 600;
             font-size: 14px;
-            line-height: 150%;
             text-transform: uppercase;
             font-feature-settings: "liga" off;
             background: $cl1;
@@ -77,5 +77,42 @@
         border-radius: 10px;
         transition: left 0.5s ease, transform 0.2s ease;
         background-color: $cl2;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        &__runner {
+            display: none;
+        }
+        &__list {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header__logo {
+        width: 80%;
+    }
+}
+
+// --------------- //
+
+@media screen and (max-width: 1000px) {
+    .header {
+        padding: 24px 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .header {
+        padding: 15px 30px;
     }
 }

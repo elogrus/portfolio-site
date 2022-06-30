@@ -1,0 +1,119 @@
+@import "../burger";
+.burger-menu {
+    user-select: none;
+    display: none;
+    padding: 60px 20px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: $cl4;
+    opacity: 0.9;
+    z-index: 150;
+    left: 100vw;
+    transition: left 0.5s ease;
+    &[data-opened="true"] {
+        left: 0;
+    }
+    // .burger-menu__burger
+    &__burger {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 12px;
+        position: fixed;
+        z-index: 151;
+        right: 12px;
+        padding: 21px;
+        top: 0;
+        transition: top 0.5s ease;
+        & span {
+            width: 16px;
+            height: 0px;
+            border: 1px solid $cl2;
+            position: absolute;
+            z-index: 151;
+            left: calc(50% - 8px);
+        }
+        @include burger; // _burger.scss
+    }
+
+    // .burger-menu__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+    // .burger-menu__item
+    &__item {
+        @include text1;
+        display: inline;
+        position: relative;
+        text-align: center;
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $cl3;
+            left: 0;
+            bottom: -10px;
+        }
+        &:active {
+            opacity: 0.8;
+        }
+        & a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 40px;
+            color: $cl3;
+        }
+        &.active {
+            font-feature-settings: "liga" off;
+            background: $cl1;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            &:after {
+                background: $cl1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .burger-menu {
+        display: block;
+        &__burger {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .burger-menu__list {
+        gap: 60px;
+    }
+    .burger-menu__item a {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .burger-menu__item a {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .burger-menu__list {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .burger-menu__burger {
+        top: 5px;
+    }
+}

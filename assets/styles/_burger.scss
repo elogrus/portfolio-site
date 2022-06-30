@@ -1,0 +1,38 @@
+@mixin burger {
+    display: flex;
+    $time: 0.4s; // full animation-time = $time*2
+    & span {
+        transition: top $time ease, opacity $time ease,
+            transform $time ease $time;
+        transition: top $time ease $time, opacity $time ease $time,
+            transform $time ease;
+    }
+
+    & span:first-child {
+        top: calc(50% - 6px);
+    }
+    & span:nth-child(2) {
+        top: 50%;
+        opacity: 1;
+    }
+    & span:last-child {
+        top: calc(50% + 6px);
+    }
+
+    &[data-opened="true"] span {
+        transition: top $time ease, opacity $time ease,
+            transform $time ease $time;
+    }
+    &[data-opened="true"] span:first-child {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    &[data-opened="true"] span:nth-child(2) {
+        top: 50%;
+        opacity: 0;
+    }
+    &[data-opened="true"] span:last-child {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+}
