@@ -14,10 +14,26 @@
             <aside class="burger-menu" id="burger-menu" data-opened="false">
                 <ul class="burger-menu__list">
                     <li class="burger-menu__item active">
-                        <a href="#!">HOME</a>
+                        <a
+                            href="#!"
+                            onclick="scrollToElem('.home');toggleBurger()"
+                            >HOME</a
+                        >
                     </li>
-                    <li class="burger-menu__item"><a href="#!">Work</a></li>
-                    <li class="burger-menu__item"><a href="#!">About</a></li>
+                    <li class="burger-menu__item">
+                        <a
+                            href="#!"
+                            onclick="scrollToElem('.work');toggleBurger()"
+                            >Work</a
+                        >
+                    </li>
+                    <li class="burger-menu__item">
+                        <a
+                            href="#!"
+                            onclick="scrollToElem('.about-me');toggleBurger()"
+                            >About</a
+                        >
+                    </li>
                 </ul>
                 <div
                     class="burger-menu__burger"
@@ -41,13 +57,28 @@
                 <div class="header__right">
                     <ul class="header__list">
                         <li class="header__list-item active">
-                            <a class="header__link" href="#!">Home</a>
+                            <a
+                                class="header__link"
+                                onclick="scrollToElem('.home')"
+                                href="#!"
+                                >Home</a
+                            >
                         </li>
                         <li class="header__list-item">
-                            <a class="header__link" href="#!">Work</a>
+                            <a
+                                class="header__link"
+                                onclick="scrollToElem('.work')"
+                                href="#!"
+                                >Work</a
+                            >
                         </li>
                         <li class="header__list-item">
-                            <a class="header__link" href="#!">About</a>
+                            <a
+                                class="header__link"
+                                onclick="scrollToElem('.about-me')"
+                                href="#!"
+                                >About</a
+                            >
                         </li>
                     </ul>
                     <div class="header__runner"></div>
@@ -58,7 +89,7 @@
                     I’m a designer specialising in <b>UI/UX</b> and
                     <b>Interaction Design</b>
                 </div>
-                <div class="home__arrow" id="scroller">
+                <div class="home__arrow" onclick="scrollToElem('.clients')">
                     <img src="./assets/media/chevron-down.svg" alt="" />
                 </div>
             </section>
@@ -114,10 +145,15 @@
                                 </b>
                             </span>
                             <span class="item__category">Website Design</span>
-                            <button class="button1_arrow">View work</button>
+                            <button
+                                class="button1_arrow"
+                                onclick="showWork(this)"
+                            >
+                                View work
+                            </button>
                         </div>
                     </li>
-                    <li class="work__item item">
+                    <li class="work__item item" showed="true">
                         <img
                             class="item__img"
                             src="./assets/media/work/work2.png"
@@ -135,7 +171,12 @@
                                 </b>
                             </span>
                             <span class="item__category">Mobile App</span>
-                            <button class="button2_arrow">View work</button>
+                            <button
+                                class="button2_arrow"
+                                onclick="showWork(this)"
+                            >
+                                View work
+                            </button>
                         </div>
                     </li>
                     <li class="work__item item">
@@ -154,7 +195,12 @@
                                 </b>
                             </span>
                             <span class="item__category">Mobile App</span>
-                            <button class="button1_arrow">View work</button>
+                            <button
+                                class="button1_arrow"
+                                onclick="showWork(this)"
+                            >
+                                View work
+                            </button>
                         </div>
                     </li>
                     <li class="work__item item">
@@ -173,10 +219,28 @@
                                 </b>
                             </span>
                             <span class="item__category">Animation</span>
-                            <button class="button1_arrow">View work</button>
+                            <button
+                                class="button1_arrow"
+                                onclick="showWork(this)"
+                            >
+                                View work
+                            </button>
                         </div>
                     </li>
                 </ul>
+                <div
+                    class="work__present"
+                    id="work-present"
+                    data-active="false"
+                >
+                    <div class="work__present-img" id="work-present-img"></div>
+                    <button
+                        class="button1 work__present-button"
+                        onclick="closeWork(this)"
+                    >
+                        Close
+                    </button>
+                </div>
             </section>
             <section class="about-me">
                 <div class="about-me__text">

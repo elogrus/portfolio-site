@@ -41,9 +41,9 @@
         @extend .button1;
         &:after {
             content: url("../../media/expand-false.svg");
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 24px;
+            position: relative;
+            top: -1px;
         }
     }
 }
@@ -84,11 +84,12 @@
     }
     &_arrow {
         @extend .button2;
+
         &:after {
             content: url("../../media/expand-true.svg");
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            top: -1px;
+            height: 24px;
         }
     }
 }

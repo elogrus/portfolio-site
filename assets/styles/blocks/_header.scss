@@ -83,10 +83,10 @@
 @media screen and (max-width: 450px) {
     .header {
         &__runner {
-            display: none;
+            visibility: hidden;
         }
         &__list {
-            display: none;
+            visibility: hidden;
         }
     }
 }

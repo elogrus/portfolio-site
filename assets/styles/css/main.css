@@ -110,9 +110,9 @@ select {
 }
 .button1_arrow:after {
   content: url("../../media/expand-false.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 24px;
+  position: relative;
+  top: -1px;
 }
 
 .button2, .button2_arrow {
@@ -151,9 +151,9 @@ select {
 }
 .button2_arrow:after {
   content: url("../../media/expand-true.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -1px;
+  height: 24px;
 }
 
 .header {
@@ -249,10 +249,10 @@ select {
 
 @media screen and (max-width: 450px) {
   .header__runner {
-    display: none;
+    visibility: hidden;
   }
   .header__list {
-    display: none;
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 360px) {
@@ -316,9 +316,9 @@ select {
 }
 .button1_arrow:after {
   content: url("../../media/expand-false.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 24px;
+  position: relative;
+  top: -1px;
 }
 
 .button2, .button2_arrow {
@@ -357,9 +357,9 @@ select {
 }
 .button2_arrow:after {
   content: url("../../media/expand-true.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -1px;
+  height: 24px;
 }
 
 .home {
@@ -467,9 +467,9 @@ select {
 }
 .button1_arrow:after {
   content: url("../../media/expand-false.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 24px;
+  position: relative;
+  top: -1px;
 }
 
 .button2, .button2_arrow {
@@ -508,9 +508,9 @@ select {
 }
 .button2_arrow:after {
   content: url("../../media/expand-true.svg");
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -1px;
+  height: 24px;
 }
 
 .clients {
@@ -646,6 +646,48 @@ select {
   display: flex;
   flex-direction: column;
   gap: 97px;
+}
+.work__present {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background-image: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+  z-index: 102;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  transition: opacity 0.8s ease;
+  overflow-y: scroll;
+  opacity: 0;
+}
+.work__present[data-active=true] {
+  display: flex;
+  animation-name: opacityAnim;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes opacityAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.work__present-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  min-height: 70vh;
+  margin-bottom: 20px;
+}
+.work__present-img img {
+  width: 100%;
 }
 .item {
   display: flex;

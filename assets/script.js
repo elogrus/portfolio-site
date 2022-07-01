@@ -51,42 +51,40 @@ function headerRunnerLeave(event) {
 
 startRunnerElement();
 
-// burger-menu appends from width <= 450
-if (window.screen.width > 450) {
-    document.querySelectorAll(".header__list-item").forEach((elem) => {
-        elem.addEventListener("mouseenter", headerRunnerEnter);
-        elem.addEventListener("mouseleave", headerRunnerLeave);
-    });
-}
+document.querySelectorAll(".header__list-item").forEach((elem) => {
+    elem.addEventListener("mouseenter", headerRunnerEnter);
+    elem.addEventListener("mouseleave", headerRunnerLeave);
+});
 
 // * ------- * //
 
-function scrollTo(event) {
-    let pos = event.currentTarget.parentNode.offsetHeight;
+function scrollToElem(selector) {
+    console.log(selector);
+    let pos =
+        document.querySelector(selector).getBoundingClientRect().top +
+        document.documentElement.scrollTop +
+        10;
+    console.log(pos);
     window.scroll(0, pos);
 }
-document.querySelectorAll("#scroller").forEach((elem) => {
-    elem.addEventListener("pointerdown", scrollTo);
-});
 
 // * --------------------------- * //
 
-function burger() {
-    // burger-menu appends from width <= 450
-    if (window.screen.width > 450) return;
-
+function toggleBurger(event) {
     let burger = document.getElementById("burger");
     let burgerModal = document.getElementById("burger-menu");
-    function onBurgerClick(event) {
-        if (burger.dataset.opened == "true") {
-            burger.dataset.opened = false;
-            burgerModal.dataset.opened = false;
-        } else {
-            burger.dataset.opened = true;
-            burgerModal.dataset.opened = true;
-        }
+    if (burger.dataset.opened == "true") {
+        burger.dataset.opened = false;
+        burgerModal.dataset.opened = false;
+    } else {
+        burger.dataset.opened = true;
+        burgerModal.dataset.opened = true;
     }
-    burger.addEventListener("pointerdown", onBurgerClick);
+}
+
+function burger() {
+    let burger = document.getElementById("burger");
+    burger.addEventListener("pointerdown", toggleBurger);
 }
 
 burger();
@@ -99,7 +97,6 @@ function hideHeaderOnScroll() {
     let burgerTop = burger.offsetTop;
     let burgerModal = document.getElementById("burger-menu");
     function onScroll(event) {
-        console.log("scroll");
         let nowScroll = document.documentElement.scrollTop;
         if (nowScroll > currentScroll && burgerModal.dataset.opened != "true") {
             header.style.top = "-100%";
@@ -117,3 +114,27 @@ function hideHeaderOnScroll() {
     setTimeout(() => window.addEventListener("scroll", onScroll), 2000);
 }
 hideHeaderOnScroll();
+
+// * ------------------- * //
+
+function showWork(button) {
+    console.log("showed");
+    console.log(button);
+    let item = button.closest(".work__item");
+    let img = item.querySelector(".item__img");
+    console.log(img);
+    let imgCopy = img.cloneNode();
+    let present = document.getElementById("work-present");
+    console.log(present);
+
+    present.firstElementChild.prepend(imgCopy);
+    present.dataset.active = true;
+}
+
+function closeWork(button) {
+    let work = document.querySelector(".work");
+    let present = work.querySelector(".work__present");
+    let imgbox = document.getElementById("work-present-img");
+    present.dataset.active = false;
+    imgbox.innerHTML = "";
+}
