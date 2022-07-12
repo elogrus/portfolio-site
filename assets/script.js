@@ -59,8 +59,6 @@ function headerRunnerLeave(event) {
     moveRunner(runnerElement);
 }
 
-startRunnerElement();
-
 document.querySelectorAll(".header__list-item").forEach((elem) => {
     elem.addEventListener("mouseenter", headerRunnerEnter);
     elem.addEventListener("mouseleave", headerRunnerLeave);
@@ -97,8 +95,6 @@ function burger() {
     burger.addEventListener("pointerdown", toggleBurger);
 }
 
-burger();
-
 // * --------------------------- * //
 function hideHeaderOnScroll() {
     let currentScroll = 0;
@@ -123,7 +119,6 @@ function hideHeaderOnScroll() {
     // when site was loaded, user start scroll and he may not see that header exists, so I set 2s delay
     setTimeout(() => window.addEventListener("scroll", onScroll), 2000);
 }
-hideHeaderOnScroll();
 
 // * ------------------- * //
 
@@ -148,3 +143,9 @@ function closeWork(button) {
     present.dataset.active = false;
     imgbox.innerHTML = "";
 }
+
+window.onload = () => {
+    startRunnerElement();
+    burger();
+    hideHeaderOnScroll();
+};
