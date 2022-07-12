@@ -4,6 +4,13 @@ function startRunnerElement() {
     let list = document.querySelector(".header__list");
     let items = list.querySelectorAll(".header__list-item");
     activeElement = list.querySelector(".header__list-item.active");
+    console.log("startRunnerElement");
+    console.log(list);
+    console.log(items);
+    console.log(activeElement);
+    console.log("/startRunnerElement");
+    console.log("  ");
+
     let i = 0;
     Array.prototype.find.apply(items, [
         (elem) => {
@@ -20,10 +27,13 @@ function moveRunner(pos) {
     let runner = document.querySelector(".header__runner");
     let left = 0;
     let i = 0;
-    for (i; i < pos; i++) {
+    console.log("moveRunner for");
+    for (; i < pos; i++) {
         left += items[i].offsetWidth;
     }
     left += (items[i].offsetWidth - runner.offsetWidth) / 2;
+    console.log(`left = ${left}`);
+    console.log("/moveRunner for");
     runner.style.left = left + "px";
 
     runner.style.transform = "scalex(1.5)";
@@ -48,8 +58,6 @@ function headerRunnerLeave(event) {
     activeElement.classList.add("active");
     moveRunner(runnerElement);
 }
-
-startRunnerElement();
 
 document.querySelectorAll(".header__list-item").forEach((elem) => {
     elem.addEventListener("mouseenter", headerRunnerEnter);
@@ -87,8 +95,6 @@ function burger() {
     burger.addEventListener("pointerdown", toggleBurger);
 }
 
-burger();
-
 // * --------------------------- * //
 function hideHeaderOnScroll() {
     let currentScroll = 0;
@@ -113,7 +119,6 @@ function hideHeaderOnScroll() {
     // when site was loaded, user start scroll and he may not see that header exists, so I set 2s delay
     setTimeout(() => window.addEventListener("scroll", onScroll), 2000);
 }
-hideHeaderOnScroll();
 
 // * ------------------- * //
 
@@ -138,3 +143,9 @@ function closeWork(button) {
     present.dataset.active = false;
     imgbox.innerHTML = "";
 }
+
+window.onload = () => {
+    startRunnerElement();
+    burger();
+    hideHeaderOnScroll();
+};
