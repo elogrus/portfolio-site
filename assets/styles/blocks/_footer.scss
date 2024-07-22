@@ -60,6 +60,17 @@
         margin-top: 80px;
         font-size: 18px;
         text-align: center;
+        & a {
+            transition: opacity .3s;
+            text-decoration: none;
+            &:hover {
+                opacity: .8;
+            }
+
+            &:active {
+                opacity: .6;
+            }
+        }
     }
 }
 

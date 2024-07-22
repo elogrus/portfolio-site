@@ -421,7 +421,6 @@ select {
   .home__text {
     font-size: 24px;
   }
-
   .home__arrow {
     bottom: 80px;
   }
@@ -778,7 +777,6 @@ select {
   .item__title {
     font-size: 16px;
   }
-
   .item__description {
     font-size: 24px;
   }
@@ -787,7 +785,6 @@ select {
   .item__title {
     font-size: 14px;
   }
-
   .item__description {
     font-size: 20px;
   }
@@ -806,7 +803,6 @@ select {
   .work__list {
     gap: 67px;
   }
-
   .item {
     flex-direction: column;
     align-items: center;
@@ -905,7 +901,6 @@ select {
   .about-me__title {
     font-size: 20px;
   }
-
   .about-me__content {
     font-size: 24px;
   }
@@ -914,7 +909,6 @@ select {
   .about-me__title {
     font-size: 18px;
   }
-
   .about-me__content {
     line-height: 170%;
   }
@@ -923,7 +917,6 @@ select {
   .about-me__title {
     font-size: 18px;
   }
-
   .about-me__content {
     font-size: 20px;
   }
@@ -933,16 +926,13 @@ select {
     flex-direction: column;
     align-items: center;
   }
-
   .about-me__text,
-.about-me__photos {
+  .about-me__photos {
     width: 100%;
   }
-
   .about-me__photos-column {
     flex-direction: row;
   }
-
   .about-me__photos {
     flex-direction: column-reverse;
   }
@@ -1027,21 +1017,28 @@ select {
   font-size: 18px;
   text-align: center;
 }
+.footer__end-text a {
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+.footer__end-text a:hover {
+  opacity: 0.8;
+}
+.footer__end-text a:active {
+  opacity: 0.6;
+}
 
 @media screen and (max-width: 400px) {
   .footer__title {
     font-size: 46px;
   }
-
   .footer__subtitle {
     font-size: 17px;
     line-height: 200%;
   }
-
   .footer__list {
     gap: 40px;
   }
-
   .footer__end-text {
     line-height: 180%;
   }
@@ -1055,11 +1052,9 @@ select {
   .footer__title {
     font-size: 40px;
   }
-
   .footer__subtitle {
     font-size: 15px;
   }
-
   .footer__list {
     gap: 20px;
   }
@@ -1213,7 +1208,6 @@ select {
   .burger-menu__list {
     gap: 60px;
   }
-
   .burger-menu__item a {
     font-size: 34px;
   }
@@ -1261,20 +1255,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
-  /* width of the entire scrollbar */
+  width: 12px; /* width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
-  /* color of the tracking area */
+  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%); /* color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(90deg, rgb(188, 60, 216) 0%, rgb(197, 75, 140) 100%);
-  /* color of the scroll thumb */
-  border-radius: 20px;
-  /* roundness of the scroll thumb */
+  background-image: linear-gradient(90deg, rgb(188, 60, 216) 0%, rgb(197, 75, 140) 100%); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
 
 [hidden] {
